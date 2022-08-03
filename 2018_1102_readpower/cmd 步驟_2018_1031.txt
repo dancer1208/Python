@@ -1,0 +1,13 @@
+
+esptool.py --port COM? erase_flash (清除8266記憶體)
+
+
+esptool.py --port COM7 --baud 115200 write_flash -fm dio --flash_size=detect 0 D:\esp8266.bin
+
+pip install adafruit-ampy (安裝檔案存取工具)
+
+(命令提示字元 檔案存取) 
+ampy --port com? ls
+ampy --port com? get 檔名
+ampy --port com? put 檔名
+

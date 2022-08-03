@@ -1,0 +1,17 @@
+import urllib.request
+
+x = urllib.request.urlopen('https://www.ctbcbank.com')
+#x = urllib.request.urlopen('http://www.google.com')
+x_str=bytes.decode(x.read())
+print('網頁總長',len(x_str))
+a_no=x_str.split('基金')
+print('基金分割', len(a_no))
+#print(a_no[0])
+b_no=x_str.split('查詢')
+print('查詢分割', len(b_no))
+c_no=x_str.split('信用卡')
+print('信用卡分割', len(c_no))
+#print(p2)
+#p21,p22=p1.split('客戶投資現值查詢',2)
+#print(p21)
+#print(x.read())
