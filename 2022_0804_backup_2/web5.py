@@ -58,8 +58,9 @@ def url(PORT):
       </head>
       <body>
         <h1>2000_0805</h1>
-        <button onclick="alertTest()">clickme</button>
-        <p id="ppp"></p>        <p><b><h1 align="center"> 武男的_L0220_通信網路技術實驗室鐵捲門</h1></b></p>
+        <button style="width:200px; height:50px; background:aqua; font-size:large" onclick="document.getElementById('ppp').innerHTML='just test'">clickme</button>
+        <h3 id="ppp"></h3>   
+        <p><b><h1 align="center"> 武男的_L0220_通信網路技術實驗室鐵捲門</h1></b></p>
         <p><b><h1 align="center">連線{n2}次，啟閉{n1}次，目前時間{t0}年{t1}月{t2}日{t3}時{t4}分{t5}秒</h1></b></p>
         <form align="center">
         <button name="Up" value="ON001" type="submit"
@@ -69,16 +70,15 @@ def url(PORT):
         <button name="Down" value="ON001" type="submit"
         style="width:400px;height:100px;font-size:40px;color:red;background:#66d3fa">下</button>
         </form>
-        <script>
-        function alertTest(){
-            document.getElementById("ppp").innerHTML='just a test'
-        } 
-        </script>
-    
+
       </body>
     </html>
     """
-
+        # <script>
+        #     function alertTest(){
+        #         alert('just a test');
+        # } 
+        # </script>
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind((HOST,PORT))
     s.listen(30)
